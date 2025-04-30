@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QHN Foodies Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' };
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      transition: 0.3s ease;
+    }
+    .btn {
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #059669;
+    }
+  </style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+
+  <header class="flex justify-between items-center p-5 bg-white dark:bg-gray-800 shadow">
+    <h1 class="text-3xl font-bold">QHN Foodies Hub</h1>
+    <button id="themeToggle" class="bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded">Toggle Theme</button>
+  </header>
+
+  <section class="bg-cover bg-center h-96 relative" style="background-image: url('https://source.unsplash.com/1600x900/?food');">
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+      <h2 class="text-4xl md:text-6xl font-bold mb-4">Home Cooked Meals Delivered Fresh</h2>
+      <a href="#menu" class="bg-green-500 hover:bg-green-600 px-8 py-3 rounded-full text-lg">Order Now</a>
+    </div>
+  </section>
+
+  <main class="px-6 py-10 max-w-7xl mx-auto">
+    <h2 id="menu" class="text-3xl font-bold mb-8 text-center">Weekly Menu</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="card bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+        <img src="https://source.unsplash.com/400x300/?chicken-curry" alt="Chicken Qorma" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Monday - Chicken Qorma + 2 Chapaties</h3>
+          <p class="mb-2">Deal for one person</p>
+          <p class="font-bold mb-4">Rs. 269</p>
+          <a href="https://wa.me/923259720004?text=I want to order Monday's Chicken Qorma deal" target="_blank" class="btn block bg-green-500 text-white text-center py-2 rounded">Order Now</a>
+        </div>
+      </div>
+      <div class="card bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+        <img src="https://source.unsplash.com/400x300/?dal" alt="Daal Mash" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Tuesday - Daal Mash + 2 Chapaties</h3>
+          <p class="mb-2">Deal for one person</p>
+          <p class="font-bold mb-4">Rs. 199</p>
+          <a href="https://wa.me/923259720004?text=I want to order Tuesday's Daal Mash deal" target="_blank" class="btn block bg-green-500 text-white text-center py-2 rounded">Order Now</a>
+        </div>
+      </div>
+      <div class="card bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+        <img src="https://source.unsplash.com/400x300/?dal-chawal" alt="Daal Chawal" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Wednesday - Daal Chawal + Salad + Shami</h3>
+          <p class="mb-2">Deal for one person</p>
+          <p class="font-bold mb-4">Rs. 259</p>
+          <a href="https://wa.me/923259720004?text=I want to order Wednesday's Daal Chawal deal" target="_blank" class="btn block bg-green-500 text-white text-center py-2 rounded">Order Now</a>
+        </div>
+      </div>
+      <div class="card bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+        <img src="https://source.unsplash.com/400x300/?biryani" alt="Chicken Biryani" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Thursday - Chicken Biryani + Salad + Shami</h3>
+          <p class="mb-2">Deal for one person</p>
+          <p class="font-bold mb-4">Rs. 349</p>
+          <a href="https://wa.me/923259720004?text=I want to order Thursday's Biryani deal" target="_blank" class="btn block bg-green-500 text-white text-center py-2 rounded">Order Now</a>
+        </div>
+      </div>
+      <div class="card bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+        <img src="https://source.unsplash.com/400x300/?vegetable-curry" alt="Vegetable Dish" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Friday - Veg Dish + 2 Chapaties</h3>
+          <p class="mb-2">Deal for one person</p>
+          <p class="font-bold mb-4">Rs. 229</p>
+          <a href="https://wa.me/923259720004?text=I want to order Friday's Veg Dish deal" target="_blank" class="btn block bg-green-500 text-white text-center py-2 rounded">Order Now</a>
+        </div>
+      </div>
+      <div class="card bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+        <img src="https://source.unsplash.com/400x300/?aloo-gosht" alt="Aloo Gosht" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Saturday - Aloo Gosht + 2 Chapaties</h3>
+          <p class="mb-2">Deal for one person</p>
+          <p class="font-bold mb-4">Rs. 259</p>
+          <a href="https://wa.me/923259720004?text=I want to order Saturday's Aloo Gosht deal" target="_blank" class="btn block bg-green-500 text-white text-center py-2 rounded">Order Now</a>
+        </div>
+      </div>
+      <div class="card bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+        <img src="https://source.unsplash.com/400x300/?kofta" alt="Kofta and Egg" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Sunday - 2 Koftas with Egg + 2 Chapaties</h3>
+          <p class="mb-2">Deal for one person</p>
+          <p class="font-bold mb-4">Rs. 289</p>
+          <a href="https://wa.me/923259720004?text=I want to order Sunday's Kofta deal" target="_blank" class="btn block bg-green-500 text-white text-center py-2 rounded">Order Now</a>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-3xl font-bold my-10 text-center">Extras</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card bg-yellow-100 dark:bg-yellow-900 rounded-lg p-4 text-center">
+        <h3 class="text-xl font-semibold mb-1">Kachomar Salad</h3>
+        <p class="mb-2">Rs. 150</p>
+        <a href="https://wa.me/923259720004?text=I want to order Kachomar Salad" target="_blank" class="btn bg-green-500 text-white px-4 py-2 rounded">Order Now</a>
+      </div>
+      <div class="card bg-yellow-100 dark:bg-yellow-900 rounded-lg p-4 text-center">
+        <h3 class="text-xl font-semibold mb-1">Simple Salad</h3>
+        <p class="mb-2">Rs. 110</p>
+        <a href="https://wa.me/923259720004?text=I want to order Simple Salad" target="_blank" class="btn bg-green-500 text-white px-4 py-2 rounded">Order Now</a>
+      </div>
+      <div class="card bg-yellow-100 dark:bg-yellow-900 rounded-lg p-4 text-center">
+        <h3 class="text-xl font-semibold mb-1">Zeera Raita</h3>
+        <p class="mb-2">Rs. 120</p>
+        <a href="https://wa.me/923259720004?text=I want to order Zeera Raita" target="_blank" class="btn bg-green-500 text-white px-4 py-2 rounded">Order Now</a>
+      </div>
+      <div class="card bg-yellow-100 dark:bg-yellow-900 rounded-lg p-4 text-center">
+        <h3 class="text-xl font-semibold mb-1">Mint Raita</h3>
+        <p class="mb-2">Rs. 120</p>
+        <a href="https://wa.me/923259720004?text=I want to order Mint Raita" target="_blank" class="btn bg-green-500 text-white px-4 py-2 rounded">Order Now</a>
+      </div>
+      <div class="card bg-yellow-100 dark:bg-yellow-900 rounded-lg p-4 text-center">
+        <h3 class="text-xl font-semibold mb-1">Sada Roti</h3>
+        <p class="mb-2">Rs. 25</p>
+        <a href="https://wa.me/923259720004?text=I want to order Sada Roti" target="_blank" class="btn bg-green-500 text-white px-4 py-2 rounded">Order Now</a>
+      </div>
+      <div class="card bg-yellow-100 dark:bg-yellow-900 rounded-lg p-4 text-center">
+        <h3 class="text-xl font-semibold mb-1">Sada Naan</h3>
+        <p class="mb-2">Rs. 30</p>
+        <a href="https://wa.me/923259720004?text=I want to order Sada Naan" target="_blank" class="btn bg-green-500 text-white px-4 py-2 rounded">Order Now</a>
+      </div>
+    </div>
+
+    <h2 class="text-3xl font-bold my-10 text-center">Desserts</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card bg-pink-100 dark:bg-pink-900 rounded-lg p-4 text-center">
+        <h3 class="text-xl font-semibold mb-1">Custard</h3>
+        <p class="mb-2">Rs. 160</p>
+        <a href="https://wa.me/923259720004?text=I want to order Custard" target="_blank" class="btn bg-green-500 text-white px-4 py-2 rounded">Order Now</a>
+      </div>
+      <div class="card bg-pink-100 dark:bg-pink-900 rounded-lg p-4 text-center">
+        <h3 class="text-xl font-semibold mb-1">Jelly</h3>
+        <p class="mb-2">Rs. 150</p>
+        <a href="https://wa.me/923259720004?text=I want to order Jelly" target="_blank" class="btn bg-green-500 text-white px-4 py-2 rounded">Order Now</a>
+      </div>
+      <div class="card bg-pink-100 dark:bg-pink-900 rounded-lg p-4 text-center">
+        <h3 class="text-xl font-semibold mb-1">Mix Fruit Salad</h3>
+        <p class="mb-2">Rs. 220</p>
+        <a href="https://wa.me/923259720004?text=I want to order Mix Fruit Salad" target="_blank" class="btn bg-green-500 text-white px-4 py-2 rounded">Order Now</a>
+      </div>
+    </div>
+  </main>
+
+  <a href="https://wa.me/923259720004" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg">Chat</a>
+
+  <footer class="text-center py-6 bg-gray-100 dark:bg-gray-800">
+    <p class="text-gray-600 dark:text-gray-300">© 2025 QHN Foodies Hub. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
